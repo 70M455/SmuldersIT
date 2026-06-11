@@ -293,15 +293,15 @@ h3 { font-size: 1.1rem; font-weight: 700; }
 }
 .trust-label { font-size: 0.78rem; color: var(--text3); font-weight: 500; }
 .trust-logos { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
-.trust-logos span {
-  font-weight: 800;
-  font-size: 0.95rem;
-  color: var(--text3);
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  transition: color var(--tr);
+.trust-logos img {
+  height: 26px;
+  width: auto;
+  object-fit: contain;
+  opacity: 0.55;
+  filter: grayscale(1);
+  transition: opacity var(--tr), filter var(--tr);
 }
-.trust-logos span:hover { color: var(--text2); }
+.trust-logos img:hover { opacity: 0.85; filter: grayscale(0); }
 
 /* Hero credential card */
 .hero-card {
@@ -682,6 +682,7 @@ h3 { font-size: 1.1rem; font-weight: 700; }
 .tl-icon.sig { background: #ffedd5; color: #c2410c; border-color: #fed7aa; }
 .tl-icon.ing { background: #fff7ed; color: #c2410c; border-color: #fed7aa; }
 .tl-icon.kpn { background: #dcfce7; color: #15803d; border-color: #86efac; }
+.tl-icon.def { background: #f1f5f9; color: #334155; border-color: #94a3b8; }
 .tl-line { flex: 1; width: 2px; background: var(--border); margin: 8px 0; }
 .tl-last .tl-line { display: none; }
 
@@ -717,7 +718,28 @@ h3 { font-size: 1.1rem; font-weight: 700; }
   white-space: nowrap;
 }
 .tl-card h3 { font-size: 1rem; margin-bottom: 10px; }
-.tl-card > p { color: var(--text2); font-size: 0.88rem; line-height: 1.7; margin-bottom: 16px; }
+.tl-card > p { color: var(--text2); font-size: 0.88rem; line-height: 1.7; margin-bottom: 12px; }
+.tl-bullets {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+.tl-bullets li {
+  color: var(--text2);
+  font-size: 0.85rem;
+  line-height: 1.6;
+  padding-left: 16px;
+  position: relative;
+}
+.tl-bullets li::before {
+  content: "–";
+  position: absolute;
+  left: 0;
+  color: var(--blue);
+  font-weight: 600;
+}
 .tl-tags { display: flex; flex-wrap: wrap; gap: 5px; }
 .tl-tags span {
   font-size: 0.71rem;
@@ -730,6 +752,34 @@ h3 { font-size: 1.1rem; font-weight: 700; }
 }
 
 
+/* ── Timeline logo images ── */
+.tl-logo {
+  height: 22px;
+  width: auto;
+  max-width: 120px;
+  display: block;
+  margin-bottom: 6px;
+  object-fit: contain;
+}
+.tl-company { display: block; }
+
+/* ── Hero credential card clearance row ── */
+.hc-clearance {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #7c3aed;
+  background: #f5f3ff;
+  border: 1px solid #ddd6fe;
+  border-radius: 8px;
+  padding: 8px 12px;
+  margin-bottom: 4px;
+}
+.hc-clearance svg { color: #7c3aed; flex-shrink: 0; }
+
+
 /* ══════════════════════════════════════
    CREDENTIALS
 ══════════════════════════════════════ */
@@ -737,10 +787,88 @@ h3 { font-size: 1.1rem; font-weight: 700; }
   padding: 100px 0;
   background: var(--bg);
 }
+
+/* Clearance highlight bar */
+.clearance-bar {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%);
+  border: 1px solid #c4b5fd;
+  border-radius: var(--radius-lg);
+  padding: 24px 28px;
+  margin-bottom: 48px;
+}
+.clearance-icon {
+  width: 48px; height: 48px;
+  background: #7c3aed;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  flex-shrink: 0;
+}
+.clearance-title {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #4c1d95;
+  margin-bottom: 6px;
+}
+.clearance-desc {
+  font-size: 0.85rem;
+  color: #6d28d9;
+  line-height: 1.65;
+}
+
+/* Section sub-labels */
+.cred-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text3);
+  margin-bottom: 18px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+}
+
+/* Further certifications pill list */
+.further-certs {
+  margin: 28px 0 40px;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 20px 24px;
+}
+.fc-header {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text3);
+  margin-bottom: 14px;
+}
+.fc-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.fc-pills span {
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 5px 14px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  color: var(--text2);
+}
+
 .cred-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
+  margin-bottom: 0;
 }
 .cred-card {
   background: var(--bg);

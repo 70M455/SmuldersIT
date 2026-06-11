@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 36" role="img" aria-label="Ministerie van Defensie">
+  <!-- Simplified Dutch lion shield -->
+  <rect x="2" y="4" width="22" height="28" rx="3" fill="#154273"/>
+  <path d="M13 8 C13 8 17 10 17 14 C17 17 15 18 13 18 C11 18 9 17 9 14 C9 10 13 8 13 8Z" fill="#F5C518"/>
+  <path d="M10 18 L10 26 L13 24 L16 26 L16 18Z" fill="#F5C518"/>
+  <!-- Text -->
+  <text x="30" y="16" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="9.5" fill="#154273">MINISTERIE VAN</text>
+  <text x="30" y="28" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="11" fill="#154273" letter-spacing="0.5">DEFENSIE</text>
+</svg>
