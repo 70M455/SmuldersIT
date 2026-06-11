@@ -703,8 +703,7 @@ h3 { font-size: 1.1rem; font-weight: 700; }
   margin-bottom: 10px;
   flex-wrap: wrap;
 }
-.tl-company { font-weight: 700; color: var(--navy); font-size: 0.9rem; display: block; margin-bottom: 2px; }
-.tl-period { font-size: 0.75rem; color: var(--text3); font-weight: 500; }
+.tl-company { font-weight: 700; color: var(--navy); font-size: 0.9rem; display: block; }
 .tl-sector {
   font-size: 0.69rem;
   font-weight: 700;
