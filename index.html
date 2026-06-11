@@ -287,8 +287,9 @@
 
         <div class="about-visual reveal">
           <div class="avatar-wrap">
-            <!-- Replace with your photo: <img src="img/tomas.jpg" alt="Tomas Smulders"> -->
-            <div class="avatar-placeholder">TS</div>
+            <img src="img/tomas.jpg" alt="Tomas Smulders"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="avatar-placeholder" style="display:none">TS</div>
           </div>
           <div class="cert-pills">
             <div class="cert-pill">CISSP</div>
