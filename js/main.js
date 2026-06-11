@@ -85,9 +85,10 @@ if (form) {
     e.preventDefault();
     const name    = form.elements.name.value.trim();
     const email   = form.elements.email.value.trim();
-    const subject = form.elements.subject.value.trim() || 'Consulting enquiry';
+    const service = form.elements.service?.value || '';
+    const subject = service ? `Enquiry: ${service}` : 'Consulting enquiry';
     const message = form.elements.message.value.trim();
-    const body    = `Name: ${name}\nEmail: ${email}\n\n${message}`;
+    const body    = `Name: ${name}\nEmail: ${email}\nService: ${service || 'Not specified'}\n\n${message}`;
     window.location.href =
       `mailto:tomas@smuldersit.nl?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   });
