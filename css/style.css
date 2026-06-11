@@ -293,15 +293,15 @@ h3 { font-size: 1.1rem; font-weight: 700; }
 }
 .trust-label { font-size: 0.78rem; color: var(--text3); font-weight: 500; }
 .trust-logos { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
-.trust-logos img {
-  height: 26px;
-  width: auto;
-  object-fit: contain;
-  opacity: 0.55;
-  filter: grayscale(1);
-  transition: opacity var(--tr), filter var(--tr);
+.trust-logos span {
+  font-weight: 800;
+  font-size: 0.95rem;
+  color: var(--text3);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: color var(--tr);
 }
-.trust-logos img:hover { opacity: 0.85; filter: grayscale(0); }
+.trust-logos span:hover { color: var(--text2); }
 
 /* Hero credential card */
 .hero-card {
@@ -751,17 +751,6 @@ h3 { font-size: 1.1rem; font-weight: 700; }
   color: var(--text3);
 }
 
-
-/* ── Timeline logo images ── */
-.tl-logo {
-  height: 22px;
-  width: auto;
-  max-width: 120px;
-  display: block;
-  margin-bottom: 6px;
-  object-fit: contain;
-}
-.tl-company { display: block; }
 
 /* ── Hero credential card clearance row ── */
 .hc-clearance {

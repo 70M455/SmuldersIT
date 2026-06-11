@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 36" role="img" aria-label="KPN">
-  <!-- Crown element -->
-  <path d="M28 8 L28 16 L24 12 L22 16 L20 12 L18 16 L16 12 L14 16 L14 8 Z" fill="#00A550"/>
-  <!-- KPN wordmark -->
-  <text x="40" y="26" text-anchor="middle" font-family="Arial Black, Impact, sans-serif" font-weight="900" font-size="17" fill="#00A550">KPN</text>
-</svg>
